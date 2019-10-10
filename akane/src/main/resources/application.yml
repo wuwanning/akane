@@ -1,0 +1,17 @@
+server:
+  port: 3939
+
+  
+spring:
+  datasource:
+    url: jdbc:mysql://111.231.79.149:3306/db_blog?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: Miku@520 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+      
+      
+  jpa:
+    show-sql: true 
+    hibernate: 
+      ddl-auto: update   
