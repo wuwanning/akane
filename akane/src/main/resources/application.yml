@@ -3,6 +3,10 @@ server:
 
   
 spring:
+  redis:
+    host: 111.231.79.149
+    port: 6379
+   
   datasource:
     url: jdbc:mysql://111.231.79.149:3306/db_blog?useUnicode=true&characterEncoding=UTF-8
     username: root
