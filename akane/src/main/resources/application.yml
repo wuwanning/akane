@@ -9,7 +9,12 @@ spring:
     password: Miku@520 
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-      
+  
+  redis: 
+    host: 111.231.79.149
+    port: 6379
+   
+  
       
   jpa:
     show-sql: true 

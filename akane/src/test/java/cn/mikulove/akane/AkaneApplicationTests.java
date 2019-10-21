@@ -9,18 +9,28 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import org.assertj.core.util.Arrays;
+import java.util.Random;
+
+import javax.annotation.Resource;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import cn.mikulove.akane.model.Comment;
+import cn.mikulove.akane.service.CommentService;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class AkaneApplicationTests {
+	
+	@Resource
+	private CommentService service;
 
 	@Test
 	public void contextLoads() {
-		System.out.println(codeAddOne(1,3));
+
 	}
 
 	public static String codeAddOne(Integer code, int len){
@@ -76,4 +86,14 @@ public class AkaneApplicationTests {
         }
         /* */
 	}	
+	 public static String getRandomString(int length){
+	     String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	     Random random=new Random();
+	     StringBuffer sb=new StringBuffer();
+	     for(int i=0;i<length;i++){
+	       int number=random.nextInt(62);
+	       sb.append(str.charAt(number));
+	     }
+	     return sb.toString();
+	 }
 }
