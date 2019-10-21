@@ -1,5 +1,7 @@
 package cn.mikulove.akane.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -22,6 +24,11 @@ public class BlogServiceImpl implements BlogService{
 	@Override
 	public Blog findBlog(Integer id) {
 		return dao.findById(id).get();
+	}
+
+	@Override
+	public List<Blog> findAllBlog() {
+		return dao.findAll();
 	}
 
 }

@@ -1,5 +1,7 @@
 package cn.mikulove.akane.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,5 +30,10 @@ public class BlogController {
 	@PostMapping
 	public Blog addBlog(@RequestBody Blog blog){
 		return service.createBlog(blog);
+	}
+	
+	@GetMapping("/list")
+	public List<Blog> findAllBlog(){
+		return service.findAllBlog();
 	}
 }
